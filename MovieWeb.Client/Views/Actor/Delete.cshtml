@@ -1,0 +1,10 @@
+﻿@model MovieWeb.Client.Models.Actors.ActorDeleteViewModel
+
+<h1>Delete actor</h1>
+
+<p>Are you sure you want to delete <strong>@Model.FirstName @Model.LastName</strong>?</p>
+
+<form method="post" asp-controller="Actor" asp-action="ConfirmDelete" asp-route-id="@Model.Id">
+    <button class="btn btn-danger">Delete</button>
+    <a class="btn btn-secondary" asp-controller="Actor" asp-action="Index">Cancel</a>
+</form>

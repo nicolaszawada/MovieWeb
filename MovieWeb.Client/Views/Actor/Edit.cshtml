@@ -1,0 +1,24 @@
+﻿@model MovieWeb.Client.Models.Actors.ActorEditViewModel
+
+<form asp-controller="Actor" asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <input class="form-control" asp-for="FirstName" />
+        <span class="text-danger" asp-validation-for="FirstName"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <input class="form-control" asp-for="LastName" />
+        <span class="text-danger" asp-validation-for="LastName"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Birthdate"></label>
+        <input class="form-control" asp-for="Birthdate" />
+        <span class="text-danger" asp-validation-for="Birthdate"></span>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Update</button>
+    <a class="btn btn-secondary" asp-controller="Actor" asp-action="Index">Cancel</a>
+</form>

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MovieWeb.Client.Models.Actors.ActorListViewModel>
+
+<table>
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th><a class="no-hover" asp-controller="Actor" asp-action="Create">➕</a></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var actor in Model)
+        {
+            <tr>
+                <td>@actor.FirstName</td>
+                <td>@actor.LastName</td>
+                <td> <a class="no-hover" asp-controller="Actor" asp-action="Details" asp-route-id="@actor.Id">🔎</a> </td>
+                <td><a class="no-hover" asp-controller="Actor" asp-action="Edit" asp-route-id="@actor.Id">✏️</a></td>
+                <td><a class="no-hover" asp-controller="Actor" asp-action="Delete" asp-route-id="@actor.Id">🗑️</a></td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MovieWeb.Database\MovieWeb.Database.csproj" />
+    <ProjectReference Include="..\MovieWeb.Domain\MovieWeb.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
